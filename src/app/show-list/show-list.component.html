@@ -1,0 +1,16 @@
+<br />
+<p>Wyswietlam zadania zrobione:</p>
+
+<div *ngFor="let x of tasksDone">
+  <img src="assets/checked.jpg" style="width: 50px" />
+  <li appChecked appDate [date]="x.created">
+    {{ x.name }}
+  </li>
+</div>
+
+<!--
+<li appChecked *ngFor="let x of tasksDone">
+  <img src="assets/checked.jpg" style="width: 50px; background: aquamarine" />
+  {{ x.name }}
+</li>
+-->
